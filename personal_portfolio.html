@@ -6,9 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack Podsiad Portfolio</title>
 
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.net.min.js"></script>
+
     <style>
         html {
-            background-color: rgb(47, 47, 47);
+             background-color: #100022; 
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        #vanta_bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            min-width: 100vw;
+            min-height: 100vh;
+            z-index: -1;
+        }
+
+        #name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:35vw;
+            
+
         }
 
         h1 {
@@ -19,14 +45,42 @@
         }
 
         header {
-            text-align: center;
-            word-spacing: 35px;
-            background-color: red;
+            margin: 30px; /* this isn't really working */
+        }
+
+        header div {
+            display: flex;
+            justify-content: center;
+            
+
             
         }
 
-        header a {
+        header div nav {
+            background: rgba(0, 0, 0, .1);
+            backdrop-filter: blur(5px);
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding-inline-start: 3rem;
+            padding-inline-end: 3rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+
+            font-size: large;
+            
+    
+        } 
+
+        header div nav div {
+            display: flex;
+            gap: 4rem;
+        }
+
+        header div nav div a {
             color: whitesmoke;
+            font-family: monospace;
+            text-decoration: none;
+
         }
 
     </style>
@@ -37,18 +91,75 @@
     </script>
 </head>
 
-<body>
+<body id="body">
+    <div id="vanta_bg"></div>
+
     <header>
-            <a href="home"> Home </a>
-            <a href="about"> About </a>
-            <a href="experience">Experience</a>
-            <a href="achievements">Achievements</a>
-            <a href="contact">Contact</a>
+        <div>
+            <nav>
+                <div>
+                    <a href="home">Home</a>
+                    <a href="about">About</a>
+                    <a href="experience">Experience</a>
+                    <a href="achievements">Achievements</a>
+                    <a href="contact">Contact</a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <body>
-        <h1> Jack Podsiad</h1>
-    </body>
+    <main>
+        <div id="name">
+            <h1> Jack Podsiad</h1>
+        </div>
+        
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+        <h2> larp </h2>
+
+
+
+    </main>
+
+    <script>
+        VANTA.NET({
+        el: "#vanta_bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xcc30fc,
+        backgroundColor: 0x100022,
+        points: 13.00,
+        maxDistance: 18.00,
+        spacing: 19.00,
+        })
+    </script>
 </body>
     
 </html>

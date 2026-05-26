@@ -30,24 +30,41 @@
 
         #name {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height:35vw;
+            height:55vw;
             
 
         }
 
-        h1 {
+        #name h1 {
             text-align: center;
-            color: rgb(240, 217, 234);
+            
+            color: transparent;
+            background-image: linear-gradient(to right, #9596fd, #efafff);
+            background-clip: text;
+
+            /* color: rgb(240, 217, 234); */
+
             font-size: 100px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
+        #name h2 {
+            text-align: center;
+            color: rgb(240, 217, 234);
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+
         header {
             margin: 30px;
-            position: sticky;
+            position: fixed;
             top: 30px;
+            z-index: 100;
+            justify-self: center;
         }
 
         header div {
@@ -95,10 +112,53 @@
             padding-bottom: 1.5rem;
 
             color: whitesmoke;
-            margin: 5.5rem;
+            margin: 5rem;
+            margin-left: 10rem;
+            margin-right: 10rem;
             font-family: monospace;
-            font-size: large;
+            font-size: x-large;
         }
+
+        #infoBox h2 {
+            width: max-content;
+            color: transparent;
+            background-image: linear-gradient(to right, #9596fd, #efafff);
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: whitesmoke;
+        }
+
+        #infoBox hr {
+            border: none;
+            height: 2px;
+            background-image: linear-gradient(to right, #9596fd, #efafff);
+
+        }
+
+        #infoBox ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #infoList h3 {
+            
+        }
+
+        /* Link Colors */
+        #infoList li a:link{color: #9596fd;}
+        #infoList li a:visited{color: purple;}
+        #infoList li a:hover{color: #efafff;}
+        #infoList li a:active{color: magenta;}
+
+        #skillsLists {
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            gap: 12rem;
+        }
+        
 
     </style>
 
@@ -115,11 +175,11 @@
         <div>
             <nav>
                 <div>
-                    <a href="home">Home</a>
-                    <a href="about">About</a>
-                    <a href="experience">Experience</a>
-                    <a href="achievements">Achievements</a>
-                    <a href="contact">Contact</a>
+                    <a href="#name">Home</a>
+                    <a href="#aboutMeIndex">About</a>
+                    <a href="#skillsIndex">Skills</a>
+                    <a href="#achievementsIndex">Achievements</a>
+                    <a href="#contactIndex">Contact</a>
                 </div>
             </nav>
         </div>
@@ -128,59 +188,105 @@
     <main>
         <div id="name">
             <h1>Jack Podsiad</h1>
+            <h2>Future Software Engineer</h2>
         </div>
 
-        <div id="infoBox">
-            <h2>
-                About Me
-            </h2>
+        <br id="aboutMeIndex">
 
-            <HR></HR>
+        <div id="infoBox">
+            <h2>About Me</h2>
+
+            <hr></hr>
 
             <p>
-                I'm a full time software engineer larper. There's no limit to what I do.
-
-
+                I'm a highschool student with a passion for coding and a drive to get better.
             </p>
 
             <ul id="infoList">
-                <li>currently a student at Western Highschool </li>
-                <li>currently enrolled at the Bay Arenac ISD Career </li>
-                <li>I have a love for coding and solving problems </li>
-                <li>I plan to go to Delta, then transfer into SVSU to pursue a bachelor's degree in Software Engineering</li>
-                
+                <li>Currently a student at Western Highschool </li>
+                <li>Currently enrolled at the Bay Arenac ISD Career </li>
+                <li>Currently enrolled in Delta</li>
+                <li>Planning to transfer to SVSU</li>
+                <li>Aiming to get a Bachelor's Degree in Software Engineering</li>                
             
             </ul>
         </div>
-        
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
-        <h2> larp </h2>
+
+        <br id="skillsIndex">
+
+        <div id="infoBox"> 
+            <h2>Skills</h2>
+
+            <hr></hr>
+
+            <p>
+                Here are some of my strongest skills:
+            </p>
 
 
+            <div id="skillsLists">
+                <ul id="infoList">
+                    <h3>Hard Skills</h3>
+                    <li>GDScript Proficient</li>
+                    <li>HTML/CSS Certified</li>
+                    <li>JavaScript Certified</li>
+                    <li>Java Certified</li>
+                    <li>Google/Microsoft Suite</li>
+                </ul>
+                
+                <ul id="infoList">
+                    <h3>Soft Skills</h3>
+                    <li>Teamwork</li>
+                    <li>Communication</li>
+                    <li>Problem Solving</li>
+                    <li>Love for Learning</li>
+                    <li>Versitile</li>
+                </ul>
+            </div>
+            
+        </div>
 
+        <br id="achievementsIndex">
+
+        <div id="infoBox"> 
+            <h2>Achievements</h2>
+
+            <hr></hr>
+
+            <p>
+                Here are some of my most notable achievements
+            </p>
+
+            <ul id="infoList">
+                <li>Business Professionals of America competitor</li>
+                <li>Nationals finalist for Software Engineering Team (BPA)</li>
+                <li>State Qualifier for Technology Information Concepts (BPA)</li>
+                <li>State Qualifier for Java Programming (BPA)</li>
+                <li>Student Success Award at the Career Center</li>
+                <li>4.17 GPA</li>
+                
+        </div>
+
+        <br id="contactIndex">
+
+        <div id="infoBox"> 
+            <h2>Contact Info</h2>
+
+            <hr></hr>
+
+            <p>
+                Here's some links for extra info, as well as ways to contact me.
+            </p>
+
+            <ul id="infoList">
+                <li>Email: jackpodsiad@gmail.com</li>
+                <li>Phone: 989-572-3295</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/jack-podsiad-58569b38a" target="_blank">View Profile</a></li>
+                <li>GitHub: <a href="https://github.com/Jack-Of-Spades-14" target="_blank">View Profile</a></li>
+        </div>
+
+        <br>
+    
     </main>
 
     <script>
